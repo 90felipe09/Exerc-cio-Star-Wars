@@ -1,4 +1,3 @@
-package br.usp.ime.labpoo;
 
 public class Aprendiz extends Sith {
 	private double conhecSabre; //porcentagem de conhecimento para construir o sabre

@@ -1,4 +1,3 @@
-package br.usp.ime.labpoo;
 
 public class Jedi extends Ser{
 	private boolean telepatia;

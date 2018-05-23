@@ -2,11 +2,24 @@ package br.usp.ime.labpoo;
 
 public class Lorde extends Aprendiz {
 	private Sabre sabre;
-	
-	public Lorde(String nome, String genero, String especie, int ano, String planeta, double conc, 
-			double paz,	double raiva, String apelido, boolean telepatia, boolean telecinese, 
-			boolean persuasao, Academia academia, double conhecSabre, Lorde treinador, Sabre sabre) {
-		super(nome, genero, especie, ano, planeta, conc, paz, raiva, apelido, telepatia, telecinese, persuasao, academia, conhecSabre, treinador);
+
+	public Lorde(String nome, String genero, String especie, int anoNasc, String planetaNatal, int dominioDaForça,
+			int dominioDoSabre, int pontosDeVida, Habilidade[] habilidades, double concMidiChlor, double percPazInterna,
+			double percRaiva, String apelido, boolean telepatia, boolean telecinese, boolean persuasao,
+			Academia academia, double conhecSabre, Lorde treinador, Sabre sabre) {
+		super(nome, genero, especie, anoNasc, planetaNatal, dominioDaForça, dominioDoSabre, pontosDeVida, habilidades,
+				concMidiChlor, percPazInterna, percRaiva, apelido, telepatia, telecinese, persuasao, academia,
+				conhecSabre, treinador);
 		this.sabre = sabre;
 	}
+
+	public Sabre getSabre() {
+		return sabre;
+	}
+
+	public void setSabre(Sabre sabre) {
+		this.sabre = sabre;
+	}
+	
+	
 }

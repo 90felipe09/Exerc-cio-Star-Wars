@@ -3,16 +3,17 @@ package br.usp.ime.labpoo;
 public class Mestre extends Cavaleiro {
 	private double campoVidencia;
 	private double imortalidade;
-	
-	public Mestre(String nome, String genero, String especie, int ano, String planeta, double conc, 
-			double paz, double raiva, boolean telepatia, boolean telecinese, boolean persuasao,
-			Academia academia, boolean cabelo, Mestre mestre, double conhecSabre, int anoCaval, Sabre sabre, double campoVidencia, double imortalidade) {
-		super(nome, genero, especie, ano, planeta, conc, paz, raiva, telepatia, telecinese, persuasao,
-				academia, cabelo, mestre, conhecSabre, anoCaval, sabre);
+
+	public Mestre(String nome, String genero, String especie, int anoNasc, String planetaNatal, int dominioDaForça,
+			int dominioDoSabre, int pontosDeVida, Habilidade[] habilidades, double concMidiChlor, double percPazInterna,
+			double percRaiva, boolean telepatia, boolean telecinese, boolean persuasao, Academia academia,
+			boolean cabelo, Mestre mestre, int anoCaval, Sabre sabre, double campoVidencia, double imortalidade) {
+		super(nome, genero, especie, anoNasc, planetaNatal, dominioDaForça, dominioDoSabre, pontosDeVida, habilidades,
+				concMidiChlor, percPazInterna, percRaiva, telepatia, telecinese, persuasao, academia, cabelo, mestre,
+				anoCaval, sabre);
 		this.campoVidencia = campoVidencia;
 		this.imortalidade = imortalidade;
 	}
-
 	public double getCampoVidencia() {
 		return campoVidencia;
 	}

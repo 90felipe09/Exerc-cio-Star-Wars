@@ -6,6 +6,10 @@ public class Ser {
 	private String especie;
 	private int anoNasc;
 	private String planetaNatal;
+	private int dominioDaForça;
+	private int dominioDoSabre;
+	private int pontosDeVida;
+	private Habilidade[] habilidades = new Habilidade[4];
 	
 	private double concMidiChlor;
 	//armazena a concentracao de midi-chlorians do ser
@@ -17,20 +21,29 @@ public class Ser {
 	//existem seres que nao sao nem Jedi, nem Sith
 	//assim, Ser nao pode ser classe abstrata; tem objetos
 	
-	public Ser(String nome, String genero, String especie, int ano, String planeta, double conc, double paz, double raiva) {
+	public Ser(String nome, String genero, String especie, int anoNasc, String planetaNatal, int dominioDaForça,
+			int dominioDoSabre, int pontosDeVida, Habilidade[] habilidades, double concMidiChlor, double percPazInterna,
+			double percRaiva) {
+		super();
 		this.nome = nome;
 		this.genero = genero;
 		this.especie = especie;
-		anoNasc = ano;
-		planetaNatal = planeta;
-		concMidiChlor = conc;
-		percPazInterna = paz;
-		percRaiva = raiva;
+		this.anoNasc = anoNasc;
+		this.planetaNatal = planetaNatal;
+		this.dominioDaForça = dominioDaForça;
+		this.dominioDoSabre = dominioDoSabre;
+		this.pontosDeVida = pontosDeVida;
+		this.habilidades = habilidades;
+		this.concMidiChlor = concMidiChlor;
+		this.percPazInterna = percPazInterna;
+		this.percRaiva = percRaiva;
 	}
+
 	
 	public double getPercPazInterna() {
 		return percPazInterna;
 	}
+
 	public void setPercPazInterna(double p) {
 		percPazInterna = p;
 	}
@@ -54,6 +67,70 @@ public class Ser {
 	}
 	public void setPercRaiva(double percRaiva) {
 		this.percRaiva = percRaiva;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getEspecie() {
+		return especie;
+	}
+
+	public void setEspecie(String especie) {
+		this.especie = especie;
+	}
+
+	public int getAnoNasc() {
+		return anoNasc;
+	}
+
+	public void setAnoNasc(int anoNasc) {
+		this.anoNasc = anoNasc;
+	}
+
+	public String getPlanetaNatal() {
+		return planetaNatal;
+	}
+
+	public void setPlanetaNatal(String planetaNatal) {
+		this.planetaNatal = planetaNatal;
+	}
+
+	public int getDominioDaForça() {
+		return dominioDaForça;
+	}
+
+	public void setDominioDaForça(int dominioDaForça) {
+		this.dominioDaForça = dominioDaForça;
+	}
+
+	public int getDominioDoSabre() {
+		return dominioDoSabre;
+	}
+
+	public void setDominioDoSabre(int dominioDoSabre) {
+		this.dominioDoSabre = dominioDoSabre;
+	}
+
+	public int getPontosDeVida() {
+		return pontosDeVida;
+	}
+
+	public void setPontosDeVida(int pontosDeVida) {
+		this.pontosDeVida = pontosDeVida;
+	}
+
+	public Habilidade[] getHabilidades() {
+		return habilidades;
+	}
+
+	public void setHabilidades(Habilidade[] habilidades) {
+		this.habilidades = habilidades;
 	}
 	
 }

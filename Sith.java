@@ -11,20 +11,23 @@ public class Sith extends Ser{
 	
 	private Academia academia;
 	//academia
-	
-	public Sith (String nome, String genero, String especie, int ano, String planeta, double conc, double paz,
-			double raiva, String apelido, boolean telepatia, boolean telecinese, boolean persuasao, Academia academia) {
-		super (nome, genero, especie, ano, planeta, conc, paz, raiva);
-		this.apelido = apeido;
+
+	public String getApelido() {
+		return apelido;
+	}
+	public Sith(String nome, String genero, String especie, int anoNasc, String planetaNatal, int dominioDaForça,
+			int dominioDoSabre, int pontosDeVida, Habilidade[] habilidades, double concMidiChlor, double percPazInterna,
+			double percRaiva, String apelido, boolean telepatia, boolean telecinese, boolean persuasao,
+			Academia academia) {
+		super(nome, genero, especie, anoNasc, planetaNatal, dominioDaForça, dominioDoSabre, pontosDeVida, habilidades,
+				concMidiChlor, percPazInterna, percRaiva);
+		this.apelido = apelido;
 		this.telepatia = telepatia;
 		this.telecinese = telecinese;
 		this.persuasao = persuasao;
 		this.academia = academia;
 	}
-
-	public String getApelido() {
-		return apelido;
-	}
+	
 	public void setApelido(String apelido) {
 		this.apelido = apelido;
 	}
@@ -49,5 +52,12 @@ public class Sith extends Ser{
 	public void setPersuasao(boolean persuasao) {
 		this.persuasao = persuasao;
 	}
+	public Academia getAcademia() {
+		return academia;
+	}
+	public void setAcademia(Academia academia) {
+		this.academia = academia;
+	}
 
+	
 }

@@ -1,4 +1,3 @@
-package br.usp.ime.labpoo;
 
 public class Cla {
 	private String nomeCla;

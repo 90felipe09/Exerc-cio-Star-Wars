@@ -1,4 +1,3 @@
-package br.usp.ime.labpoo;
 
 public class Academia {
 	private String nomeAcademia;

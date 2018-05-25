@@ -1,7 +1,7 @@
 # Exercício 1 e 2 da Lista 7 de LabOO
 Repositório para o Exercício Programa de Laboratório de Orientação a Objeto
 
-A versão final do exercício consta no diretório src/br/usp/ime/labpoo
+A versão final do exercício consta no diretório StarWars_parte2
 
 As classes correspondetes ao Exercício 1 são:
 

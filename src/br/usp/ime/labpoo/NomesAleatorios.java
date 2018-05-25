@@ -89,7 +89,7 @@ public class NomesAleatorios {
 			"Force Projection",
 			"Force Stun",
 	};
-	// 8 planetas
+	// 7 planetas
 	private static String[] planetas = {
 			"Coruscant",
 			"Geonosis",
@@ -151,7 +151,7 @@ public class NomesAleatorios {
 	public static String getPlanetas() 
 	{
 		Random random = new Random();
-		return planetas[random.nextInt(8)];
+		return planetas[random.nextInt(7)];
 	}
 	
 	public static Habilidade[] getListaHabilidadesJedi() 

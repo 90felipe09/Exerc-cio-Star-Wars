@@ -52,14 +52,16 @@ public class Batalha {
 			if (golpeJedi != 4) {
 				if (combatentes[0].getHabilidades()[golpeJedi].getTipo() == Habilidade.tipodehabilidade.forca) {
 					combatentes[1].setPontosDeVida(combatentes[1].getPontosDeVida()
-							- combatentes[0].getHabilidades()[golpeJedi].getDano());
+							- combatentes[0].getHabilidades()[golpeJedi].getDano()
+							- combatentes[0].getDominioDaForca());
 				}
 			}
 				
 			if (golpeSith != 4) {
 				if (combatentes[1].getHabilidades()[golpeSith].getTipo() == Habilidade.tipodehabilidade.forca) {
 					combatentes[0].setPontosDeVida(combatentes[0].getPontosDeVida()
-							- combatentes[1].getHabilidades()[golpeSith].getDano());
+							- combatentes[1].getHabilidades()[golpeSith].getDano()
+							- combatentes[1].getDominioDaForca());
 				}
 			}
 		}
@@ -69,7 +71,8 @@ public class Batalha {
 				if (combatentes[0].getHabilidades()[golpeJedi].getTipo() == Habilidade.tipodehabilidade.sabre) {
 					if (!sithEsquivando){
 						combatentes[1].setPontosDeVida(combatentes[1].getPontosDeVida() 
-								- combatentes[0].getHabilidades()[golpeJedi].getDano());
+								- combatentes[0].getHabilidades()[golpeJedi].getDano()
+								-combatentes[0].getDominioDoSabre());
 					}
 				}
 			}
@@ -78,7 +81,8 @@ public class Batalha {
 				if (combatentes[1].getHabilidades()[golpeSith].getTipo() == Habilidade.tipodehabilidade.sabre) {
 					if (!jediEsquivando) {
 						combatentes[0].setPontosDeVida(combatentes[0].getPontosDeVida() -
-								combatentes[1].getHabilidades()[golpeSith].getDano());
+								combatentes[1].getHabilidades()[golpeSith].getDano() -
+								combatentes[1].getDominioDoSabre());
 					}
 				}
 			}

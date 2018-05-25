@@ -15,9 +15,7 @@ public class Sith extends Ser{
 	private Academia academia;
 	//academia
 
-	public String getApelido() {
-		return apelido;
-	}
+	
 	public Sith(String nome, String genero, String especie, int anoNasc, String planetaNatal, int dominioDaForca,
 			int dominioDoSabre, int pontosDeVida, Habilidade[] habilidades, double concMidiChlor, double percPazInterna,
 			double percRaiva, String apelido, boolean telepatia, boolean telecinese, boolean persuasao,
@@ -40,14 +38,15 @@ public class Sith extends Ser{
 				NomesAleatorios.getEspecies(),
 				random.nextInt(150),
 				NomesAleatorios.getPlanetas(),
-				random.nextInt(),
-				random.nextInt(),
-				random.nextInt(200),
+				random.nextInt(50),
+				random.nextInt(50),
+				random.nextInt(200) + 200,
 				NomesAleatorios.getListaHabilidadesSith(),
 				random.nextInt(), 
 				random.nextInt(100), 
 				random.nextInt(100));
 		
+		this.setApelido(this.getNome());
 		this.telepatia = random.nextBoolean();
 		this.telecinese = random.nextBoolean();
 		this.persuasao = random.nextBoolean();
@@ -55,6 +54,9 @@ public class Sith extends Ser{
 	
 	public void setApelido(String apelido) {
 		this.apelido = apelido;
+	}
+	public String getApelido() {
+		return this.apelido;
 	}
 
 	public boolean isTelepatia() {

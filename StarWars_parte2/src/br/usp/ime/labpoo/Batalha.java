@@ -50,31 +50,39 @@ public class Batalha {
 		
 		if (momento == 1) {
 			if (golpeJedi != 4) {
-				if (combatentes[0].getHabilidades()[golpeJedi].getTipo() == Habilidades.tipodehabilidade.força) {
-					combatentes[1].pontosDeVida -= combatentes[0].habilidades[golpeJedi].dano;
+				if (combatentes[0].getHabilidades()[golpeJedi].getTipo() == Habilidade.tipodehabilidade.forca) {
+					combatentes[1].setPontosDeVida(combatentes[1].getPontosDeVida()
+							- combatentes[0].getHabilidades()[golpeJedi].getDano()
+							- combatentes[0].getDominioDaForca());
 				}
 			}
 				
 			if (golpeSith != 4) {
-				if (combatentes[1].habilidades[golpeSith].tipo == Habilidades.tipodehabilidade.força) {
-					combatentes[0].pontosDeVida -= combatentes[1].habilidades[golpeSith].dano;
+				if (combatentes[1].getHabilidades()[golpeSith].getTipo() == Habilidade.tipodehabilidade.forca) {
+					combatentes[0].setPontosDeVida(combatentes[0].getPontosDeVida()
+							- combatentes[1].getHabilidades()[golpeSith].getDano()
+							- combatentes[1].getDominioDaForca());
 				}
 			}
 		}
 		
 		if (momento == 2) {
 			if (golpeJedi != 4) {
-				if (combatentes[0].habilidades[golpeJedi].tipo == Habilidades.tipodehabilidade.sabre) {
+				if (combatentes[0].getHabilidades()[golpeJedi].getTipo() == Habilidade.tipodehabilidade.sabre) {
 					if (!sithEsquivando){
-						combatentes[1].pontosDeVida -= combatentes[0].habilidades[golpeJedi].dano;
+						combatentes[1].setPontosDeVida(combatentes[1].getPontosDeVida() 
+								- combatentes[0].getHabilidades()[golpeJedi].getDano()
+								-combatentes[0].getDominioDoSabre());
 					}
 				}
 			}
 				
 			if (golpeSith != 4) {
-				if (combatentes[1].habilidades[golpeSith].tipo == Habilidades.tipodehabilidade.sabre) {
+				if (combatentes[1].getHabilidades()[golpeSith].getTipo() == Habilidade.tipodehabilidade.sabre) {
 					if (!jediEsquivando) {
-						combatentes[0].pontosDeVida -= combatentes[1].habilidades[golpeSith].dano;
+						combatentes[0].setPontosDeVida(combatentes[0].getPontosDeVida() -
+								combatentes[1].getHabilidades()[golpeSith].getDano() -
+								combatentes[1].getDominioDoSabre());
 					}
 				}
 			}
@@ -84,13 +92,13 @@ public class Batalha {
 	public boolean Rodada() {
 		Random random = new Random();
 		
-		golpeJedi = random.nextInt(4);
-		golpeSith = random.nextInt(4);
+		golpeJedi = random.nextInt(5);
+		golpeSith = random.nextInt(5);
 		
 		for (int i = 0; i < 3; i++)
 		{
-			momento(golpeJedi, golpeSith, i);
-			if (combatentes[0].pontosDeVida <= 0 || combatentes[1].pontosDeVida <= 0)
+			Momento(golpeJedi, golpeSith, i);
+			if (combatentes[0].getPontosDeVida() <= 0 || combatentes[1].getPontosDeVida() <= 0)
 				return true;
 		}	
 		return false;

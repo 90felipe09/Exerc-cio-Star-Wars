@@ -89,7 +89,7 @@ public class NomesAleatorios {
 			"Force Projection",
 			"Force Stun",
 	};
-	// 8 planetas
+	// 7 planetas
 	private static String[] planetas = {
 			"Coruscant",
 			"Geonosis",
@@ -103,49 +103,49 @@ public class NomesAleatorios {
 	public static String getNomeJedi() 
 	{
 		Random random = new Random();
-		return jedis[random.nextInt(9)];
+		return jedis[random.nextInt(10)];
 	}
 	
 	public static String getNomeSith() 
 	{
 		Random random = new Random();
-		return siths[random.nextInt(9)];
+		return siths[random.nextInt(10)];
 	}
 	
 	public static String getGenero() 
 	{
 		Random random = new Random();
-		return generos[random.nextInt(1)];
+		return generos[random.nextInt(2)];
 	}
 	
 	public static String getEspecies() 
 	{
 		Random random = new Random();
-		return especies[random.nextInt(5)];
+		return especies[random.nextInt(6)];
 	}
 	
 	public static String getHabilidadesSithSabre() 
 	{
 		Random random = new Random();
-		return habilidadesSithSabre[random.nextInt(7)];
+		return habilidadesSithSabre[random.nextInt(8)];
 	}
 	
 	public static String getHabilidadesJediForca() 
 	{
 		Random random = new Random();
-		return habilidadesJediForca[random.nextInt(7)];
+		return habilidadesJediForca[random.nextInt(8)];
 	}
 	
 	public static String getHabilidadesSithForca() 
 	{
 		Random random = new Random();
-		return habilidadesSithForca[random.nextInt(7)];
+		return habilidadesSithForca[random.nextInt(8)];
 	}
 	
 	public static String getHabilidadesJediSabre() 
 	{
 		Random random = new Random();
-		return habilidadesJediSabre[random.nextInt(7)];
+		return habilidadesJediSabre[random.nextInt(8)];
 	}
 	
 	public static String getPlanetas() 
@@ -194,7 +194,7 @@ public class NomesAleatorios {
 				habilidades[i] = new Habilidade(
 						getHabilidadesSithSabre(),
 						Habilidade.tipodehabilidade.sabre,
-						random.nextInt(30) + 50
+						random.nextInt(31) + 50
 						);
 			}
 			// Habilidade de Forca
@@ -203,7 +203,7 @@ public class NomesAleatorios {
 				habilidades[i] = new Habilidade(
 						getHabilidadesSithForca(),
 						Habilidade.tipodehabilidade.forca,
-						random.nextInt(30) + 20
+						random.nextInt(31) + 20
 						);
 			}
 		}

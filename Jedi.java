@@ -1,9 +1,12 @@
 package br.usp.ime.labpoo;
 
+import java.util.Random;
+
 public class Jedi extends Ser{
 	private boolean telepatia;
 	private boolean telecinese;  //0, se nao tiver tal poder; 1, se tiver
 	private boolean persuasao;
+	public static Random random = new Random();
 	
 	//eh necessario um metodo para aumentar o percentual de paz interna
 	
@@ -22,6 +25,27 @@ public class Jedi extends Ser{
 		this.telecinese = telecinese;
 		this.persuasao = persuasao;
 		this.academia = academia;
+	}
+	public Jedi() 
+	{
+		
+		super(
+				NomesAleatorios.getNomeJedi(),
+				NomesAleatorios.getGenero(),
+				NomesAleatorios.getEspecies(),
+				random.nextInt(150),
+				NomesAleatorios.getPlanetas(),
+				random.nextInt(),
+				random.nextInt(),
+				random.nextInt(200),
+				NomesAleatorios.getListaHabilidadesJedi(),
+				random.nextInt(), 
+				random.nextInt(100), 
+				random.nextInt(100));
+		
+		this.telepatia = random.nextBoolean();
+		this.telecinese = random.nextBoolean();
+		this.persuasao = random.nextBoolean();
 	}
 	
 	public void setTelepatia(boolean telepatia) {
